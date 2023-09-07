@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root{
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.avatar{
+    width: 28rem;
+    background-image: url(./images/pattern-bg.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.avatar img{
+    width: 80%;
+    z-index: 0;
+    border-radius: 8px;
+    position: relative;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 720px;
+    height: 460px;
+    flex-direction: row-reverse;
+    background-image: url(./images/curve-bg.svg);
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 800px;
+} 
+.review {
+    
+    z-index: 999;
+    overflow: visible;
+}
+
+.review img {
+    height: 60px;
+    position: absolute;
+    top: -40px;
+    left: 50px;
+}
+
+.review p {
+    font-size: 2rem;
+    padding-left: 40px;
+    width: 20ch;
+    z-index: 999;
+    color: var(--Dark-Blue);
+    font-weight: 500;
+}
+
+.user {
+    color: var(--Dark-Blue);
+    padding-top: 15px;
+    font-weight: 700;
+    padding-left: 40px;
+}
+
+.role {
+    color: var(--Grayish-Blue);
+    padding-left: 10px;
+    font-weight: 300;
+}
+
+.slider {
+    position: relative;
+}
+
+.np {
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 10%;
+}
+
+.np img {
+    cursor: pointer;
+    padding: 8px 10px 5px 10px;
+}
+
+@media (max-width: 800px) {
+    main{
+        margin-top: 5rem;
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+        flex-direction: column;
+        width: 350px;
+        margin: 10px auto;
+        background-position-y: bottom;
+    }
+
+    .review {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .avatar{
+        position: relative;
+        right: -15%;
+    }
+    .review img {
+        left: 40%;
+    }
+    .role {
+        display: block;
+    }
+
+    .np {
+        left: 40%;
+    }
+}
